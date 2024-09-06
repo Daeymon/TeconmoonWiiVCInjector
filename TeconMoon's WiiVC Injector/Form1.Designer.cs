@@ -238,7 +238,7 @@
             this.RepoDownload.Name = "RepoDownload";
             this.RepoDownload.Size = new System.Drawing.Size(128, 49);
             this.RepoDownload.TabIndex = 14;
-            this.RepoDownload.Text = "Download images from cucholix\'s repo";
+            this.RepoDownload.Text = "Download images from UWUVCI\'s Image repo";
             this.RepoDownload.UseVisualStyleBackColor = false;
             this.RepoDownload.Click += new System.EventHandler(this.RepoDownload_Click);
             // 
@@ -411,10 +411,10 @@
             this.SourceFilesTab2.Controls.Add(this.DrcSourceButton);
             this.SourceFilesTab2.Controls.Add(this.BootSoundPreviewButton);
             this.SourceFilesTab2.Location = new System.Drawing.Point(4, 22);
-            this.SourceFilesTab2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SourceFilesTab2.Margin = new System.Windows.Forms.Padding(4);
             this.SourceFilesTab2.Name = "SourceFilesTab2";
-            this.SourceFilesTab2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SourceFilesTab2.Size = new System.Drawing.Size(472, 345);
+            this.SourceFilesTab2.Padding = new System.Windows.Forms.Padding(4);
+            this.SourceFilesTab2.Size = new System.Drawing.Size(471, 345);
             this.SourceFilesTab2.TabIndex = 5;
             this.SourceFilesTab2.Text = "Optional Source Files";
             // 
@@ -600,10 +600,10 @@
             this.MetaTab.Controls.Add(this.PackedTitleLine1);
             this.MetaTab.Controls.Add(this.PackedTitleText);
             this.MetaTab.Location = new System.Drawing.Point(4, 22);
-            this.MetaTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MetaTab.Margin = new System.Windows.Forms.Padding(4);
             this.MetaTab.Name = "MetaTab";
-            this.MetaTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MetaTab.Size = new System.Drawing.Size(472, 345);
+            this.MetaTab.Padding = new System.Windows.Forms.Padding(4);
+            this.MetaTab.Size = new System.Drawing.Size(471, 345);
             this.MetaTab.TabIndex = 2;
             this.MetaTab.Text = "GamePad/Meta Options";
             // 
@@ -804,10 +804,10 @@
             this.AdvancedTab.Controls.Add(this.dol_panel);
             this.AdvancedTab.Controls.Add(this.gcn_panel);
             this.AdvancedTab.Location = new System.Drawing.Point(4, 22);
-            this.AdvancedTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AdvancedTab.Margin = new System.Windows.Forms.Padding(4);
             this.AdvancedTab.Name = "AdvancedTab";
-            this.AdvancedTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.AdvancedTab.Size = new System.Drawing.Size(472, 345);
+            this.AdvancedTab.Padding = new System.Windows.Forms.Padding(4);
+            this.AdvancedTab.Size = new System.Drawing.Size(471, 345);
             this.AdvancedTab.TabIndex = 3;
             this.AdvancedTab.Text = "Advanced";
             // 
@@ -830,7 +830,7 @@
             this.wii_panel.Controls.Add(this.DisableTrimming);
             this.wii_panel.Controls.Add(this.Force43NAND);
             this.wii_panel.Location = new System.Drawing.Point(10, 239);
-            this.wii_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.wii_panel.Margin = new System.Windows.Forms.Padding(2);
             this.wii_panel.Name = "wii_panel";
             this.wii_panel.Size = new System.Drawing.Size(456, 88);
             this.wii_panel.TabIndex = 30;
@@ -897,7 +897,7 @@
             this.dol_panel.Controls.Add(this.SaveAncastKeyButton);
             this.dol_panel.Controls.Add(this.sign_c2w_patcher_link);
             this.dol_panel.Location = new System.Drawing.Point(10, 120);
-            this.dol_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dol_panel.Margin = new System.Windows.Forms.Padding(2);
             this.dol_panel.Name = "dol_panel";
             this.dol_panel.Size = new System.Drawing.Size(456, 115);
             this.dol_panel.TabIndex = 29;
@@ -985,7 +985,7 @@
             this.gcn_panel.Controls.Add(this.MainDolLabel);
             this.gcn_panel.Controls.Add(this.MainDolSourceButton);
             this.gcn_panel.Location = new System.Drawing.Point(10, 12);
-            this.gcn_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gcn_panel.Margin = new System.Windows.Forms.Padding(2);
             this.gcn_panel.Name = "gcn_panel";
             this.gcn_panel.Size = new System.Drawing.Size(456, 83);
             this.gcn_panel.TabIndex = 28;
@@ -1098,10 +1098,10 @@
             this.BuildTab.Controls.Add(this.CommonLabel);
             this.BuildTab.Controls.Add(this.WiiUCommonKey);
             this.BuildTab.Location = new System.Drawing.Point(4, 22);
-            this.BuildTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildTab.Margin = new System.Windows.Forms.Padding(4);
             this.BuildTab.Name = "BuildTab";
-            this.BuildTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BuildTab.Size = new System.Drawing.Size(472, 345);
+            this.BuildTab.Padding = new System.Windows.Forms.Padding(4);
+            this.BuildTab.Size = new System.Drawing.Size(471, 345);
             this.BuildTab.TabIndex = 4;
             this.BuildTab.Text = "Build Title";
             // 
@@ -1129,7 +1129,7 @@
             // 
             this.BuildProgress.BackColor = System.Drawing.Color.Gainsboro;
             this.BuildProgress.Location = new System.Drawing.Point(7, 213);
-            this.BuildProgress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildProgress.Margin = new System.Windows.Forms.Padding(4);
             this.BuildProgress.Name = "BuildProgress";
             this.BuildProgress.Size = new System.Drawing.Size(456, 28);
             this.BuildProgress.TabIndex = 14;
@@ -1363,7 +1363,7 @@
             this.Controls.Add(this.MainTableLayout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "WiiVC_Injector";
             this.Text = "TeconMoon\'s WiiVC Injector - [{0}]";
