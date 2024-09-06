@@ -1199,20 +1199,16 @@ namespace TeconMoon_s_WiiVC_Injector
         {
             if (FlagNKIT)
             {
-                if (Directory.Exists(TempToolsPath + "NKIT\\Processed\\Temp"))
-                {
-                    Directory.Delete(TempToolsPath + "NKIT\\Processed\\Temp", true);
-                }
-                BuildStatus.Text = "Unscrubbing disc for NFS Conversion...";
-                BuildStatus.Refresh();
-                LauncherExeFile = TempToolsPath + "NKIT\\ConvertToISO.exe";
-                LauncherExeArgs = "\"" + inFile + "\"";
-                LaunchProgram(); // CONVERT DISC TO ISO
-                File.Move(Directory.GetFiles(TempToolsPath + "NKIT\\Processed\\GameCube_MatchFail", "*.iso")[0], TempSourcePath + "TEMPISOBASE\\files\\" + outFile);
+                File.Copy(inFile, TempSourcePath + "TEMPISOBASE\\files\\" + outFile);
             }
             else
             {
-                File.Copy(inFile, TempSourcePath + "TEMPISOBASE\\files\\" + outFile);
+                BuildStatus.Text = "Unscrubbing disc for NFS Conversion...";
+                BuildStatus.Refresh();
+                LauncherExeFile = TempToolsPath + "NKIT\\ConvertToNKit.exe";
+                LauncherExeArgs = "\"" + inFile + "\"";
+                LaunchProgram(); // CONVERT DISC TO NKIT
+                File.Move(Directory.GetFiles(TempToolsPath + "NKIT\\Processed\\GameCube_MatchFail", "*.iso")[0], TempSourcePath + "TEMPISOBASE\\files\\" + outFile);
             }
         }
 
