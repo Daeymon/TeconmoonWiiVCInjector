@@ -1194,7 +1194,7 @@ namespace TeconMoon_s_WiiVC_Injector
             HashTest(TitleKey, "F9-4B-D8-8E-BB-7A-A9-38-67-E6-30-61-5F-27-1C-9F");
         }
 
-        private void processGCNdisc(string inFile, string outFile)
+        private void ProcessGCNdisc(string inFile, string outFile)
         {
             if (FlagNKIT)
             {
@@ -1647,10 +1647,10 @@ namespace TeconMoon_s_WiiVC_Injector
                     File.Copy(TempToolsPath + "DOL\\nintendont_default_autobooter.dol", TempSourcePath + "TEMPISOBASE\\sys\\main.dol");
                 }
 
-                processGCNdisc(OGfilepath, "game.iso");
+                ProcessGCNdisc(OGfilepath, "game.iso");
 
                 if (FlagGC2Specified)
-                    processGCNdisc(OpenGC2.FileName, "disc2.iso");
+                    ProcessGCNdisc(OpenGC2.FileName, "disc2.iso");
 
                 LauncherExeFile = TempToolsPath + "WIT\\wit.exe";
                 LauncherExeArgs = "copy " + TempSourcePath + "TEMPISOBASE" + " --DEST " + TempSourcePath + "game.iso" + " -ovv --links --iso";
