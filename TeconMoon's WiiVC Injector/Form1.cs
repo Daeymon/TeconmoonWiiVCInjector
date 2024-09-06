@@ -459,7 +459,7 @@ namespace TeconMoon_s_WiiVC_Injector
         }
         private void SDCardStuff_Click(object sender, EventArgs e)
         {
-            new SDCardMenu().Show();
+            new SDCardMenu.SDCardMenuForm().Show();
         }
 
         /* Takes in a text box and the correct hash and performs the pattern
