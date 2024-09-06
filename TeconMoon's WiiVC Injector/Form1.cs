@@ -618,7 +618,7 @@ namespace TeconMoon_s_WiiVC_Injector
                             TitleIDInt = reader.ReadInt32();
                             InternalGameName = "N/A";
                         }
-                        else //Performs actions if the header indicates a normal Wii / GC iso
+                        else //Performs actions if the header indicates a normal Wii / GCN iso
                         {
                             FlagWBFS = false;
                             FlagNKIT = false;

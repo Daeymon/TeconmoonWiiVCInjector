@@ -439,7 +439,7 @@
             this.GC2SourceButton.Name = "GC2SourceButton";
             this.GC2SourceButton.Size = new System.Drawing.Size(110, 23);
             this.GC2SourceButton.TabIndex = 19;
-            this.GC2SourceButton.Text = "2nd GC Disc";
+            this.GC2SourceButton.Text = "2nd GCN Disc";
             this.GC2SourceButton.UseVisualStyleBackColor = false;
             this.GC2SourceButton.Click += new System.EventHandler(this.GC2SourceButton_Click);
             // 
@@ -1281,7 +1281,7 @@
             this.GCRetail.Name = "GCRetail";
             this.GCRetail.Size = new System.Drawing.Size(113, 17);
             this.GCRetail.TabIndex = 3;
-            this.GCRetail.Text = "GC Retail Injection";
+            this.GCRetail.Text = "GCN Retail Injection";
             this.GCRetail.UseVisualStyleBackColor = true;
             this.GCRetail.CheckedChanged += new System.EventHandler(this.GCRetail_CheckedChanged);
             // 
