@@ -3,10 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using TeconMoon_s_WiiVC_Injector.Properties;
-using static TeconMoon_s_WiiVC_Injector.StringUtil;
 
 namespace TeconMoon_s_WiiVC_Injector
 {

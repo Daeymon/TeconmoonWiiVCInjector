@@ -16,7 +16,6 @@ using Microsoft.VisualBasic.FileIO;
 using System.Runtime.InteropServices;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using TGASharpLib;
-using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 
 namespace TeconMoon_s_WiiVC_Injector
@@ -734,7 +733,7 @@ namespace TeconMoon_s_WiiVC_Injector
             else
                 tmpimage = Image.FromFile(filename);
 
-            tmpimage.Save(tmpPNG, System.Drawing.Imaging.ImageFormat.Png);
+            tmpimage.Save(tmpPNG, ImageFormat.Png);
 
             return tmpimage;
         }
