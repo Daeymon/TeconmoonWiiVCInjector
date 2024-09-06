@@ -1667,8 +1667,10 @@ namespace TeconMoon_s_WiiVC_Injector
             LauncherExeFile = TempToolsPath + "WIT\\wit.exe";
             LauncherExeArgs = "extract " + OGfilepath + " --psel data --psel -update --files +tmd.bin --files +ticket.bin --dest " + TempSourcePath + "TIKTEMP" + " -vv1";
             LaunchProgram();
-            File.Copy(TempSourcePath + "TIKTEMP\\tmd.bin", TempBuildPath + "code\\rvlt.tmd");
-            File.Copy(TempSourcePath + "TIKTEMP\\ticket.bin", TempBuildPath + "code\\rvlt.tik");
+
+            File.Copy(TempSourcePath + "TIKTEMP" + (File.Exists(TempSourcePath + "TIKTEMP\\tmd.bin") ? "" : "\\DATA") + "\\tmd.bin", TempBuildPath + "code\\rvlt.tmd");
+            File.Copy(TempSourcePath + "TIKTEMP" + (File.Exists(TempSourcePath + "TIKTEMP\\ticket.bin") ? "" : "\\DATA") + "\\ticket.bin", TempBuildPath + "code\\rvlt.tik");
+
             Directory.Delete(TempSourcePath + "TIKTEMP", true);
             BuildProgress.Value = 70;
             ////////////////////////////////////////////////
