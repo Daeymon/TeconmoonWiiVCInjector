@@ -161,7 +161,7 @@ namespace TeconMoon_s_WiiVC_Injector
             client.DownloadFile(filename, pathname);
 
             IconPreviewBox.Image = ImageSourceLoad(TempIconPath, pathname);
-            IconSourceDirectory.Text = filename + "downloaded from Cucholix's Repo";
+            IconSourceDirectory.Text = filename + "downloaded from UWUVCI's Images repo";
             IconSourceDirectory.ForeColor = Color.Black;
 
             filename = "bootTvTex.png";
@@ -170,7 +170,7 @@ namespace TeconMoon_s_WiiVC_Injector
             client.DownloadFile(filename, pathname);
 
             BannerPreviewBox.Image = ImageSourceLoad(TempBannerPath, pathname);
-            BannerSourceDirectory.Text = filename + "downloaded from Cucholix's Repo";
+            BannerSourceDirectory.Text = filename + "downloaded from UWUVCI's Images repo";
             BannerSourceDirectory.ForeColor = Color.Black;
 
             client.Dispose();
@@ -790,7 +790,7 @@ namespace TeconMoon_s_WiiVC_Injector
                 }
             }
 
-            if (MessageBox.Show("Cucholix's Repo does not have assets for your game. You will need to provide your own. Would you like to visit the GBAtemp request thread?"
+            if (MessageBox.Show("UWUVCI's Images repo does not have assets for your game. You will need to provide your own. Would you like to visit the GBAtemp request thread?"
                     , "Game not found on Repo"
                     , MessageBoxButtons.YesNo
                     , MessageBoxIcon.Asterisk) == DialogResult.Yes)
