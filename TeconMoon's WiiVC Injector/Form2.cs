@@ -637,5 +637,109 @@ namespace TeconMoon_s_WiiVC_Injector
             Process.Start("http://ridgecrop.co.uk/index.htm?guiformat.htm");
             Process.Start("http://ridgecrop.co.uk/guiformat.exe");
         }
+
+        private ConfigFile ReadConfigFile(string filePath)
+        {
+            ConfigFile nintendontCfg = new ConfigFile();
+            using (BinaryReader cfgFile = new BinaryReader(File.Open(filePath, FileMode.Open)))
+            {
+                nintendontCfg.magicBytes = BitConverter.ToUInt32(cfgFile.ReadBytes(4).Reverse().ToArray(), 0);
+                nintendontCfg.version = BitConverter.ToUInt32(cfgFile.ReadBytes(4).Reverse().ToArray(), 0);
+                nintendontCfg.config = BitConverter.ToUInt32(cfgFile.ReadBytes(4).Reverse().ToArray(), 0);
+                nintendontCfg.videoMode = BitConverter.ToUInt32(cfgFile.ReadBytes(4).Reverse().ToArray(), 0);
+                nintendontCfg.language = BitConverter.ToUInt32(cfgFile.ReadBytes(4).Reverse().ToArray(), 0);
+                nintendontCfg.gamePath = cfgFile.ReadBytes(256);
+                nintendontCfg.cheatPath = cfgFile.ReadBytes(256);
+                nintendontCfg.maxPads = BitConverter.ToUInt32(cfgFile.ReadBytes(4).Reverse().ToArray(), 0);
+                nintendontCfg.gameID = BitConverter.ToUInt32(cfgFile.ReadBytes(4).Reverse().ToArray(), 0);
+                nintendontCfg.memCardBlocks = cfgFile.ReadByte();
+                nintendontCfg.videoScale = cfgFile.ReadSByte();
+                nintendontCfg.videoOffset = cfgFile.ReadSByte();
+                nintendontCfg.networkProfile = cfgFile.ReadByte();
+                nintendontCfg.wiiuGamepadSlot = BitConverter.ToUInt32(cfgFile.ReadBytes(4).Reverse().ToArray(), 0);
+            }
+
+            return nintendontCfg;
+        }
+
+        private void MapConfigToUI(ConfigFile nintendontCfg)
+        {
+            // Memory Card Emulation
+            NintendontOptions.SetItemChecked(0, (nintendontCfg.config & (uint)ninconfig.NIN_CFG_MEMCARDEMU) != 0);
+
+            // Cheats
+            NintendontOptions.SetItemChecked(1, (nintendontCfg.config & (uint)ninconfig.NIN_CFG_CHEATS) != 0);
+
+            // Cheat Path
+            NintendontOptions.SetItemChecked(2, (nintendontCfg.config & (uint)ninconfig.NIN_CFG_CHEAT_PATH) != 0);
+
+            // Unlock Disc Read Speed
+            NintendontOptions.SetItemChecked(3, (nintendontCfg.config & (uint)ninconfig.NIN_CFG_REMLIMIT) != 0);
+
+            // Wii Remote / Classic Controller Rumble
+            NintendontOptions.SetItemChecked(4, (nintendontCfg.config & (uint)ninconfig.NIN_CFG_CC_RUMBLE) != 0);
+
+            // Triforce Arcade Mode
+            NintendontOptions.SetItemChecked(5, (nintendontCfg.config & (uint)ninconfig.NIN_CFG_ARCADE_MODE) != 0);
+
+            // Broadband Adapter Emulation
+            NintendontOptions.SetItemChecked(6, (nintendontCfg.config & (uint)ninconfig.NIN_CFG_BBA_EMU) != 0);
+
+            // Auto Video Width
+            NintendontOptions.SetItemChecked(7, (nintendontCfg.videoScale == 0));
+
+            // Language
+            LanguageBox.SelectedIndex = nintendontCfg.language == 0xFFFFFFFF ? 0 : (int)nintendontCfg.language + 1;
+
+            // MemCard Blocks
+            MemcardBlocks.SelectedIndex = nintendontCfg.memCardBlocks;
+
+            // Wii U Gamepad Slot
+            wiiUGamepadSlotBox.SelectedIndex = (int)nintendontCfg.wiiuGamepadSlot;
+
+            // Force Widescreen
+            NintendontOptions.SetItemChecked(9, (nintendontCfg.config & (uint)ninconfig.NIN_CFG_FORCE_WIDE) != 0);
+
+            // Video Force Mode
+            if ((nintendontCfg.videoMode & (uint)ninvideomode.NIN_VID_FORCE) != 0)
+                VideoForceMode.SelectedIndex = 1;
+            else if ((nintendontCfg.videoMode & (uint)ninvideomode.NIN_VID_FORCE_DF) != 0)
+                VideoForceMode.SelectedIndex = 2;
+            else if ((nintendontCfg.videoMode & (uint)ninvideomode.NIN_VID_NONE) != 0)
+                VideoForceMode.SelectedIndex = 3;
+            else
+                VideoForceMode.SelectedIndex = 0;
+
+            // Video Type Mode
+            if ((nintendontCfg.videoMode & (uint)ninvideomode.NIN_VID_FORCE_NTSC) != 0)
+                VideoTypeMode.SelectedIndex = 1;
+            else if ((nintendontCfg.videoMode & (uint)ninvideomode.NIN_VID_FORCE_MPAL) != 0)
+                VideoTypeMode.SelectedIndex = 2;
+            else if ((nintendontCfg.videoMode & (uint)ninvideomode.NIN_VID_FORCE_PAL50) != 0)
+                VideoTypeMode.SelectedIndex = 3;
+            else if ((nintendontCfg.videoMode & (uint)ninvideomode.NIN_VID_FORCE_PAL60) != 0)
+                VideoTypeMode.SelectedIndex = 4;
+            else
+                VideoTypeMode.SelectedIndex = 0;
+        }
+
+        private void LoadConfig_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Title = "Open nincfg.bin",
+                CheckFileExists = true,
+                DefaultExt = "bin",
+                Filter = "nintendont config files (*.bin)|*.bin",
+                FilterIndex = 1
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ConfigFile loadedConfig = ReadConfigFile(openFileDialog.FileName);
+                MapConfigToUI(loadedConfig);
+                MessageBox.Show("Config loaded successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

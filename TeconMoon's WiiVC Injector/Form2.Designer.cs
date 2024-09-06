@@ -51,6 +51,7 @@
             this.gamepadSlotLabel = new System.Windows.Forms.Label();
             this.wiiUGamepadSlotBox = new System.Windows.Forms.ComboBox();
             this.nintendontConfigGroupBox = new System.Windows.Forms.GroupBox();
+            this.LoadConfig = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.VideoWidth)).BeginInit();
             this.nintendontConfigGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -107,7 +108,7 @@
             // GenerateConfig
             // 
             this.GenerateConfig.AutoSize = true;
-            this.GenerateConfig.Location = new System.Drawing.Point(4, 323);
+            this.GenerateConfig.Location = new System.Drawing.Point(4, 363);
             this.GenerateConfig.Name = "GenerateConfig";
             this.GenerateConfig.Size = new System.Drawing.Size(253, 28);
             this.GenerateConfig.TabIndex = 12;
@@ -127,7 +128,7 @@
             "Spanish",
             "Italian",
             "Dutch"});
-            this.LanguageBox.Location = new System.Drawing.Point(6, 236);
+            this.LanguageBox.Location = new System.Drawing.Point(6, 276);
             this.LanguageBox.Name = "LanguageBox";
             this.LanguageBox.Size = new System.Drawing.Size(124, 21);
             this.LanguageBox.TabIndex = 9;
@@ -135,7 +136,7 @@
             // LanguageText
             // 
             this.LanguageText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.LanguageText.Location = new System.Drawing.Point(6, 213);
+            this.LanguageText.Location = new System.Drawing.Point(6, 253);
             this.LanguageText.Name = "LanguageText";
             this.LanguageText.Size = new System.Drawing.Size(124, 18);
             this.LanguageText.TabIndex = 16;
@@ -145,7 +146,7 @@
             // VideoText
             // 
             this.VideoText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.VideoText.Location = new System.Drawing.Point(135, 136);
+            this.VideoText.Location = new System.Drawing.Point(135, 176);
             this.VideoText.Name = "VideoText";
             this.VideoText.Size = new System.Drawing.Size(124, 18);
             this.VideoText.TabIndex = 15;
@@ -161,7 +162,7 @@
             "Force",
             "Force (Deflicker)",
             "None"});
-            this.VideoForceMode.Location = new System.Drawing.Point(136, 157);
+            this.VideoForceMode.Location = new System.Drawing.Point(136, 197);
             this.VideoForceMode.Name = "VideoForceMode";
             this.VideoForceMode.Size = new System.Drawing.Size(123, 21);
             this.VideoForceMode.TabIndex = 6;
@@ -177,7 +178,7 @@
             "MPAL",
             "PAL50",
             "PAL60"});
-            this.VideoTypeMode.Location = new System.Drawing.Point(136, 184);
+            this.VideoTypeMode.Location = new System.Drawing.Point(136, 224);
             this.VideoTypeMode.Name = "VideoTypeMode";
             this.VideoTypeMode.Size = new System.Drawing.Size(123, 21);
             this.VideoTypeMode.TabIndex = 7;
@@ -189,7 +190,7 @@
             this.VideoWidth.BackColor = System.Drawing.SystemColors.Control;
             this.VideoWidth.Enabled = false;
             this.VideoWidth.LargeChange = 10;
-            this.VideoWidth.Location = new System.Drawing.Point(136, 234);
+            this.VideoWidth.Location = new System.Drawing.Point(136, 274);
             this.VideoWidth.Maximum = 720;
             this.VideoWidth.Minimum = 640;
             this.VideoWidth.Name = "VideoWidth";
@@ -204,7 +205,7 @@
             // 
             this.VideoWidthText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.VideoWidthText.Enabled = false;
-            this.VideoWidthText.Location = new System.Drawing.Point(136, 213);
+            this.VideoWidthText.Location = new System.Drawing.Point(136, 253);
             this.VideoWidthText.Name = "VideoWidthText";
             this.VideoWidthText.Size = new System.Drawing.Size(123, 18);
             this.VideoWidthText.TabIndex = 17;
@@ -223,7 +224,7 @@
             // MemcardText
             // 
             this.MemcardText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.MemcardText.Location = new System.Drawing.Point(6, 136);
+            this.MemcardText.Location = new System.Drawing.Point(6, 176);
             this.MemcardText.Name = "MemcardText";
             this.MemcardText.Size = new System.Drawing.Size(124, 18);
             this.MemcardText.TabIndex = 14;
@@ -241,14 +242,14 @@
             "507 (Unstable)",
             "1019 (Unstable)",
             "2043 (Unstable)"});
-            this.MemcardBlocks.Location = new System.Drawing.Point(6, 157);
+            this.MemcardBlocks.Location = new System.Drawing.Point(6, 197);
             this.MemcardBlocks.Name = "MemcardBlocks";
             this.MemcardBlocks.Size = new System.Drawing.Size(124, 21);
             this.MemcardBlocks.TabIndex = 5;
             // 
             // MemcardMulti
             // 
-            this.MemcardMulti.Location = new System.Drawing.Point(6, 184);
+            this.MemcardMulti.Location = new System.Drawing.Point(6, 224);
             this.MemcardMulti.Name = "MemcardMulti";
             this.MemcardMulti.Size = new System.Drawing.Size(124, 26);
             this.MemcardMulti.TabIndex = 8;
@@ -274,7 +275,7 @@
             "Skip IPL",
             "OSReport",
             "Log"});
-            this.NintendontOptions.Location = new System.Drawing.Point(6, 19);
+            this.NintendontOptions.Location = new System.Drawing.Point(6, 59);
             this.NintendontOptions.MultiColumn = true;
             this.NintendontOptions.Name = "NintendontOptions";
             this.NintendontOptions.Size = new System.Drawing.Size(253, 109);
@@ -296,7 +297,7 @@
             // gamepadSlotLabel
             // 
             this.gamepadSlotLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gamepadSlotLabel.Location = new System.Drawing.Point(6, 267);
+            this.gamepadSlotLabel.Location = new System.Drawing.Point(6, 307);
             this.gamepadSlotLabel.Name = "gamepadSlotLabel";
             this.gamepadSlotLabel.Size = new System.Drawing.Size(124, 18);
             this.gamepadSlotLabel.TabIndex = 18;
@@ -312,7 +313,7 @@
             "2",
             "3",
             "4"});
-            this.wiiUGamepadSlotBox.Location = new System.Drawing.Point(6, 290);
+            this.wiiUGamepadSlotBox.Location = new System.Drawing.Point(6, 330);
             this.wiiUGamepadSlotBox.Name = "wiiUGamepadSlotBox";
             this.wiiUGamepadSlotBox.Size = new System.Drawing.Size(124, 21);
             this.wiiUGamepadSlotBox.TabIndex = 11;
@@ -326,6 +327,7 @@
             this.nintendontConfigGroupBox.Controls.Add(this.LanguageBox);
             this.nintendontConfigGroupBox.Controls.Add(this.LanguageText);
             this.nintendontConfigGroupBox.Controls.Add(this.MemcardMulti);
+            this.nintendontConfigGroupBox.Controls.Add(this.LoadConfig);
             this.nintendontConfigGroupBox.Controls.Add(this.VideoForceMode);
             this.nintendontConfigGroupBox.Controls.Add(this.MemcardBlocks);
             this.nintendontConfigGroupBox.Controls.Add(this.VideoText);
@@ -335,17 +337,28 @@
             this.nintendontConfigGroupBox.Controls.Add(this.VideoWidth);
             this.nintendontConfigGroupBox.Controls.Add(this.VideoWidthText);
             this.nintendontConfigGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nintendontConfigGroupBox.Location = new System.Drawing.Point(8, 139);
+            this.nintendontConfigGroupBox.Location = new System.Drawing.Point(8, 138);
             this.nintendontConfigGroupBox.Name = "nintendontConfigGroupBox";
-            this.nintendontConfigGroupBox.Size = new System.Drawing.Size(265, 361);
+            this.nintendontConfigGroupBox.Size = new System.Drawing.Size(265, 400);
             this.nintendontConfigGroupBox.TabIndex = 13;
             this.nintendontConfigGroupBox.TabStop = false;
             this.nintendontConfigGroupBox.Text = "Nintendont Configuration";
             // 
+            // LoadConfig
+            // 
+            this.LoadConfig.AutoSize = true;
+            this.LoadConfig.Location = new System.Drawing.Point(4, 19);
+            this.LoadConfig.Name = "LoadConfig";
+            this.LoadConfig.Size = new System.Drawing.Size(253, 28);
+            this.LoadConfig.TabIndex = 4;
+            this.LoadConfig.Text = "Load Nintendont Config File (nincfg.bin)";
+            this.LoadConfig.UseVisualStyleBackColor = true;
+            this.LoadConfig.Click += new System.EventHandler(this.LoadConfig_Click);
+            // 
             // SDCardMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(280, 512);
+            this.ClientSize = new System.Drawing.Size(280, 542);
             this.Controls.Add(this.nintendontConfigGroupBox);
             this.Controls.Add(this.Format);
             this.Controls.Add(this.ActionStatus);
@@ -376,6 +389,7 @@
         private System.Windows.Forms.Label SDCardText;
         private System.Windows.Forms.Button ReloadDrives;
         private System.Windows.Forms.Button NintendontUpdate;
+        private System.Windows.Forms.Button LoadConfig;
         private System.Windows.Forms.Label ActionStatus;
         private System.Windows.Forms.Button GenerateConfig;
         private System.Windows.Forms.ComboBox LanguageBox;
