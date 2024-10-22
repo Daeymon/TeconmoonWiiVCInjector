@@ -729,9 +729,16 @@ namespace TeconMoon_s_WiiVC_Injector
 
             Image tmpimage;
             if (Path.GetExtension(filename) == ".tga")
-                tmpimage = (new TGA(filename)).ToBitmap();
+            {
+                tmpimage = new TGA(filename).ToBitmap();
+            }
             else
-                tmpimage = Image.FromFile(filename);
+            {
+                using (MemoryStream fileStream = new MemoryStream(File.ReadAllBytes(filename)))
+                {
+                    tmpimage = Image.FromStream(fileStream);
+                }
+            }
 
             tmpimage.Save(tmpPNG, ImageFormat.Png);
 
